@@ -10,33 +10,29 @@ import {filterByValue, loadData, loadExactPage, loadNewPage, sortByAlphabet, sor
 
 
 
-    filterByInput(e){
-        let input = e.target.value;
-        this.props.dispatch(filterByValue({value: input}))
-    }
-
-    nextPage() {
-        this.props.dispatch(loadNewPage({page: 1}))
-    }
-
-    previousPage() {
-        this.props.dispatch(loadNewPage({page: -1}));
-    }
-
-    goToPage(page) {
-        this.props.dispatch(loadExactPage({page}))
-    }
-
-    sortByInput(e){
-        let value = e.target.value;
-        let direction = value.endsWith('asc') ? "asc" : "desc";
-
-        if (value.startsWith('price')){
-            this.props.dispatch(sortByPrice({direction}))
-        }else {
-            this.props.dispatch(sortByAlphabet({direction}));
-        }
-    }
+    <nav className="pagination" role="navigation" aria-label="pagination">
+                            <button className="button pagination-previous" onClick={() => {
+                                this.previousPage()
+                            }}>Previous
+                            </button>
+                            <button className="button pagination-next" onClick={() => {
+                                this.nextPage()
+                            }}>Next page
+                            </button>
+                            <ul className="pagination-list">
+                                {
+                                    [...Array(this.props.state.filteredPages)].map((value, index) => (
+                                        <button
+                                            className={`button pagination-link ${this.props.state.currentPage === index + 1 ? "is-current" : ""}`}
+                                            aria-label="Page 1"
+                                            onClick={() => this.goToPage(index + 1)}
+                                            aria-current="page">
+                                            {index + 1}
+                                        </button>
+                                    ))
+                                }
+                            </ul>
+                        </nav>
 
 
 const App = () => {
