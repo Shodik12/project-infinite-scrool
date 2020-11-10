@@ -4,7 +4,7 @@ import Avatar from './avatar.png';
 import InfiniteScroll from 'react-infinite-scroller';
 import { generateRandomData } from './helpers';
 import ContactSkeletonLoading from './ContactSkeletonLoading';
-import CarouselPager from'./CarouselPager.js';
+import CarouselPager from './CarouselPager.js';
 
 
 
@@ -21,7 +21,7 @@ const App = () => {
   ]);
 
   const fetchMoreData = () => {
-    const newData = [...contacts];
+    const newData = [...contacts(5)];
     setTimeout(() => {
       setContacts(newData);
     }, 20);
