@@ -21,7 +21,7 @@ const App = () => {
   ]);
 
   const fetchMoreData = () => {
-    const newData = [...contacts(5)];
+    const newData = [...contacts];
     setTimeout(() => {
       setContacts(newData);
     }, 20);
