@@ -21,10 +21,10 @@ const App = () => {
   ]);
 
   const fetchMoreData = () => {
-    const newData = [...contacts, ...generateRandomData(5)];
+    const newData = [...contacts(5)];
     setTimeout(() => {
       setContacts(newData);
-    }, 2000);
+    }, 20);
   }
 
   return (
