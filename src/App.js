@@ -6,6 +6,47 @@ import { generateRandomData } from './helpers';
 import ContactSkeletonLoading from './ContactSkeletonLoading';
 import {connect} from 'react-redux';
 
+
+componentDidMount() {
+        const params = new URLSearchParams(window.location.search);
+        const pageQueryParam = params.get('page');
+        if (!pageQueryParam) {
+            window.history.pushState({page: 1}, "title 1", "?page=1");
+        } else {
+
+        }
+        this.props.dispatch(loadData({count: 40}));
+    }
+
+    filterByInput(e){
+        let input = e.target.value;
+        this.props.dispatch(filterByValue({value: input}))
+    }
+
+    nextPage() {
+        this.props.dispatch(loadNewPage({page: 1}))
+    }
+
+    previousPage() {
+        this.props.dispatch(loadNewPage({page: -1}));
+    }
+
+    goToPage(page) {
+        this.props.dispatch(loadExactPage({page}))
+    }
+
+    sortByInput(e){
+        let value = e.target.value;
+        let direction = value.endsWith('asc') ? "asc" : "desc";
+
+        if (value.startsWith('price')){
+            this.props.dispatch(sortByPrice({direction}))
+        }else {
+            this.props.dispatch(sortByAlphabet({direction}));
+        }
+    }
+
+
 const App = () => {
   const [contacts, setContacts] = React.useState([
     { "id": 1,"photo": Avatar, "name": "Tamma Everill", "phone": "+351 888 411 5474" },
