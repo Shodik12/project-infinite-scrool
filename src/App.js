@@ -4,7 +4,6 @@ import Avatar from './avatar.png';
 import InfiniteScroll from 'react-infinite-scroller';
 import { generateRandomData } from './helpers';
 import ContactSkeletonLoading from './ContactSkeletonLoading';
-import {connect} from 'react-redux';
 import {filterByValue, loadData, loadExactPage, loadNewPage, sortByAlphabet, sortByPrice} from "./store";
 
 
