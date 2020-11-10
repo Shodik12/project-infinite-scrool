@@ -4,7 +4,7 @@ import Avatar from './avatar.png';
 import InfiniteScroll from 'react-infinite-scroller';
 import { generateRandomData } from './helpers';
 import ContactSkeletonLoading from './ContactSkeletonLoading';
-import {filterByValue, loadData, loadExactPage, loadNewPage, sortByAlphabet, sortByPrice} from "./store";
+import {filterByValue, loadData, loadExactPage, loadNewPage, sortByAlphabet, sortByPrice} from "./store.js";
 
 
 
