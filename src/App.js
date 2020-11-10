@@ -36,7 +36,7 @@ const App = () => {
       >
         {contacts.map(({ id, photo, name, phone }) => (
           <div className="contact-container" key={id}>
-            <img src={image} alt={name} className="avatar" />
+            <img src={photo} alt={name} className="avatar" />
             <div className="text-container">
               <h5 className="name">{name}</h5>
               <p className="phone">{phone}</p>
