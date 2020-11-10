@@ -1,6 +1,6 @@
 import React from 'react';
 import './styles.css';
-import Avatar from './avatar.png';
+import Avatar from 'https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg';
 import InfiniteScroll from 'react-infinite-scroller';
 import { generateRandomData } from './helpers';
 import ContactSkeletonLoading from './ContactSkeletonLoading';
