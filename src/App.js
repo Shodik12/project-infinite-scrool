@@ -8,16 +8,7 @@ import {connect} from 'react-redux';
 import {filterByValue, loadData, loadExactPage, loadNewPage, sortByAlphabet, sortByPrice} from "./store";
 
 
-componentDidMount() {
-        const params = new URLSearchParams(window.location.search);
-        const pageQueryParam = params.get('page');
-        if (!pageQueryParam) {
-            window.history.pushState({page: 1}, "title 1", "?page=1");
-        } else {
 
-        }
-        this.props.dispatch(loadData({count: 40}));
-    }
 
     filterByInput(e){
         let input = e.target.value;
