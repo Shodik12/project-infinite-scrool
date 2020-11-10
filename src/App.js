@@ -1,9 +1,10 @@
 import React from 'react';
 import './styles.css';
-import Avatar from 'https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg';
+import Avatar from './Avatar.png';
 import InfiniteScroll from 'react-infinite-scroller';
 import { generateRandomData } from './helpers';
 import ContactSkeletonLoading from './ContactSkeletonLoading';
+import {connect} from 'react-redux';
 
 const App = () => {
   const [contacts, setContacts] = React.useState([
