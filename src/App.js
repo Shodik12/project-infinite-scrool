@@ -4,7 +4,6 @@ import Avatar from './avatar.png';
 import InfiniteScroll from 'react-infinite-scroller';
 import { generateRandomData } from './helpers';
 import ContactSkeletonLoading from './ContactSkeletonLoading';
-import Paginator from './react-pagify';
 
 const App = () => {
   const [contacts, setContacts] = React.useState([
@@ -56,13 +55,6 @@ const App = () => {
 
 
 
-<Paginator.Context className="pagify-pagination"
-  segments={{
-    centerPage: [currentPage]
-  }} onSelect={(page) => console.log(page)}>
-  <Paginator.Button page={currentPage - 1}>Previous</Paginator.Button>
-  <Paginator.Button page={currentPage + 1}>Next</Paginator.Button>
-</Paginator.Context>
 
 
 
