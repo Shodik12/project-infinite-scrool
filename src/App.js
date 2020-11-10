@@ -15,7 +15,14 @@ const App = () => {
     { "id": 4, "photo": Avatar, "name": "Prudi Dagwell", "phone": "+62 606 216 1097" },
     { "id": 5, "photo": Avatar, "name": "Prent Frizell", "phone": "+86 808 891 5427" },
     { "id": 6, "photo": Avatar, "name": "Curtis Enterlein", "phone": "+64 836 110 1773" },
-    { "id": 7, "photo": Avatar, "name": "Margret Brissard", "phone": "+372 242 306 0100" },
+    { "id": 7, "photo": Avatar, "name": "Tamma Everill", "phone": "+351 888 411 5474" },
+    { "id": 8, "photo": Avatar, "name": "Alejandrina Alexis", "phone": "+62 188 649 7200" },
+    { "id": 9, "photo": Avatar, "name": "Hakim Bruntjen", "phone": "+86 241 773 8545" },
+    { "id": 10, "photo": Avatar, "name": "Prudi Dagwell", "phone": "+62 606 216 1097" },
+    { "id": 11, "photo": Avatar, "name": "Prent Frizell", "phone": "+86 808 891 5427" },
+    { "id": 12, "photo": Avatar, "name": "Curtis Enterlein", "phone": "+64 836 110 1773" },
+    { "id": 13, "photo": Avatar, "name": "Margret Brissard", "phone": "+372 242 306 0100" },
+    { "id": 14, "photo": Avatar, "name": "Margret Brissard", "phone": "+372 242 306 0100" },
   ]);
 
   const fetchMoreData = () => {
