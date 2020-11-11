@@ -21,10 +21,10 @@ const App = () => {
       ]);
 
   const fetchMoreData = () => {
-    const newData = [...contacts];
+    const newData = [...contacts(1)];
     setTimeout(() => {
       setContacts(newData);
-    }, 2);
+    }, 200);
   }
 
   return (
