@@ -7,40 +7,17 @@ import ContactSkeletonLoading from './ContactSkeletonLoading';
 
 
 
-    <nav className="pagination" role="navigation" aria-label="pagination">
-                            <button className="button pagination-previous" onClick={() => {
-                                this.previousPage()
-                            }}>Previous
-                            </button>
-                            <button className="button pagination-next" onClick={() => {
-                                this.nextPage()
-                            }}>Next page
-                            </button>
-                            <ul className="pagination-list">
-                                {
-                                    [...Array(this.props.state.filteredPages)].map((value, index) => (
-                                        <button
-                                            className={`button pagination-link ${this.props.state.currentPage === index + 1 ? "is-current" : ""}`}
-                                            aria-label="Page 1"
-                                            onClick={() => this.goToPage(index + 1)}
-                                            aria-current="page">
-                                            {index + 1}
-                                        </button>
-                                    ))
-                                }
-                            </ul>
-                        </nav>
-
+    
 
 const App = () => {
   const [contacts, setContacts] = React.useState([
-    { "id": 1,"photo": Avatar, "name": "Tamma Everill", "phone": "+351 888 411 5474" },
-    { "id": 2,"photo": Avatar, "name": "Alejandrina Alexis", "phone": "+62 188 649 7200" },
-    { "id": 3,"photo": Avatar, "name": "Hakim Bruntjen", "phone": "+86 241 773 8545" },
-    { "id": 4,"photo": Avatar, "name": "Prudi Dagwell", "phone": "+62 606 216 1097" },
-    { "id": 5,"photo": Avatar, "name": "Prent Frizell", "phone": "+86 808 891 5427" },
-    { "id": 6,"photo": Avatar, "name": "Curtis Enterlein", "phone": "+64 836 110 1773" },
-    { "id": 7,"photo": Avatar, "name": "Tamma Everill", "phone": "+351 888 411 5474" },
+    { "id": 1,"photo": {uri:'https://reactnative.dev/img/tiny_logo.png'}, "name": "Tamma Everill", "phone": "+351 888 411 5474" },
+    { "id": 2,"photo": {uri:'https://reactnative.dev/img/tiny_logo.png'}, "name": "Alejandrina Alexis", "phone": "+62 188 649 7200" },
+    { "id": 3,"photo": {uri:'https://reactnative.dev/img/tiny_logo.png'}, "name": "Hakim Bruntjen", "phone": "+86 241 773 8545" },
+    { "id": 4,"photo": {uri:'https://reactnative.dev/img/tiny_logo.png'}, "name": "Prudi Dagwell", "phone": "+62 606 216 1097" },
+    { "id": 5,"photo": {uri:'https://reactnative.dev/img/tiny_logo.png'}, "name": "Prent Frizell", "phone": "+86 808 891 5427" },
+    { "id": 6,"photo": {uri:'https://reactnative.dev/img/tiny_logo.png'}, "name": "Curtis Enterlein", "phone": "+64 836 110 1773" },
+    { "id": 7,"photo": {uri:'https://reactnative.dev/img/tiny_logo.png'}, "name": "Tamma Everill", "phone": "+351 888 411 5474" },
       ]);
 
   const fetchMoreData = () => {
