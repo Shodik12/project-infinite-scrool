@@ -7,11 +7,7 @@ import ContactSkeletonLoading from './ContactSkeletonLoading';
 
 
 
-    const images = [
-  'https://cdn.pixabay.com/photo/2017/06/09/09/39/adler-2386314_960_720.jpg',
-  'https://cdn.pixabay.com/photo/2017/06/02/18/24/fruit-2367029_960_720.jpg',
-  'https://cdn.pixabay.com/photo/2016/08/12/22/34/apple-1589869_960_720.jpg'
-]
+    
 
 const App = () => {
   const [contacts, setContacts] = React.useState([
@@ -28,7 +24,7 @@ const App = () => {
     const newData = [...contacts];
     setTimeout(() => {
       setContacts(newData);
-    }, 20);
+    }, 2);
   }
 
   return (
@@ -44,7 +40,7 @@ const App = () => {
       >
         {contacts.map(({ id, photo, name, phone }) => (
           <div className="contact-container" key={id}>
-            <img src={images} alt={name} className="avatar" />
+            <img src={photo.uri} alt={name} className="avatar" />
             <div className="text-container">
               <h5 className="name">{name}</h5>
               <p className="phone">{phone}</p>
